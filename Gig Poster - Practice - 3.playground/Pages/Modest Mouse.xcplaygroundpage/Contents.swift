@@ -38,7 +38,7 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 //create a loop to draw diagonal lines
 //set the line width
-canvas.defaultLineWidth = 14
+canvas.defaultLineWidth = 15
 
 for x1 in stride(from: -378, through: 378, by: 42) {
     
@@ -49,8 +49,22 @@ for x1 in stride(from: -378, through: 378, by: 42) {
     //define second x value
     let x2 = x1 + 400
     
+    //change colour of lines to grey
+    canvas.lineColor = lightGrey
+    
+    //make lins change colours twice
+    if x1 >= 84 {
+        canvas.lineColor = black
+    } else if x1 >= -42 {
+        canvas.lineColor = deepYellow
+    }
+    
     canvas.drawLine(from: Point(x: x1, y: y1), to: Point(x: x2, y: y2))
+    
 }
+
+//add grey rectangle to top of poster
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
 
 /*:
  ## Use Source Control
