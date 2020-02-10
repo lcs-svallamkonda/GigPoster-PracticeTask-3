@@ -31,7 +31,26 @@ let deepYellow = Color(hue: 46, saturation: 99, brightness: 99, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your solution here...
+//create a grey background
+canvas.drawShapesWithBorders = false
+canvas.fillColor = darkGrey
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+//create a loop to draw diagonal lines
+//set the line width
+canvas.defaultLineWidth = 14
+
+for x1 in stride(from: -378, through: 378, by: 42) {
+    
+    //define y values
+    let y1 = 0
+    let y2 = 400
+    
+    //define second x value
+    let x2 = x1 + 400
+    
+    canvas.drawLine(from: Point(x: x1, y: y1), to: Point(x: x2, y: y2))
+}
 
 /*:
  ## Use Source Control
