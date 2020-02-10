@@ -66,6 +66,15 @@ for x1 in stride(from: -378, through: 378, by: 42) {
 //add grey rectangle to top of poster
 canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
 
+//add text
+//modest mouse title
+canvas.drawText(message: "modest mouse", at: Point(x: 10, y: 405), size: 38, kerning: 0)
+
+//information text
+canvas.drawText(message: """
+at the speak in tongues social hall
+4311 lorain ave. / cleveland, oh
+""", at: Point(x: 10, y: 575), size: 9, kerning: 0)
 /*:
  ## Use Source Control
  
